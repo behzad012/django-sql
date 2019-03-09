@@ -10,3 +10,22 @@ def register(request):
 
 def infinite(request):
     return render(request, 'pages/infinite-scroll.html', {})
+
+def members(request):
+    print('---------------------------------------------------------------------')
+
+    registerName = request.POST['name']
+    registerPassword = request.POST['password']
+    registerEmail = request.POST['email']
+    getRegisterEmail = request.GET['email']
+    print('---------------------------------------------------------------------')
+    print(registerName, registerPassword, registerEmail)
+    print('---------------------------------------------------------------------')
+    return HttpResponse(registerName,registerPassword,registerEmail)
+
+    #
+    # return (registerName,registerPassword,registerEmail)
+
+def search(request):
+    searchEmail = request.POST('email')
+    print(searchEmail)

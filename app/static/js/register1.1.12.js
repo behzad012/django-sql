@@ -15,7 +15,7 @@ function registerForm(e){
     e.preventDefault();
     var settings={
       method: 'post' ,
-      url: '/api/register/' ,
+      url: '/api/members/' ,
       data: {
         name: $( '#txtRegister1' ).val().toLowerCase().trim(),
         password: $( '#txtRegister2' ).val().trim(),
@@ -76,7 +76,7 @@ function registerForm(e){
     $( '#updateinfo' ).css('display','none');
     var settings={
       method: 'get' ,
-      url: '/api/register/' ,
+      url: '/api/members/' ,
       data: {
         email: $( '#txtupdate' ).val().toLowerCase().trim()
       },
@@ -109,7 +109,7 @@ function registerForm(e){
     $( '#updateinfo' ).css('opacity','.3');
     var settings={
       method: 'PUT' ,
-      url: '/api/register/' ,
+      url: '/api/members/' ,
       data: {
         name: $( '#txtupdate0' ).val().toLowerCase().trim(),
         password: $( '#txtupdate1' ).val().trim(),
@@ -178,7 +178,7 @@ function registerForm(e){
     $( '#deleteResult' ).css('opacity','.2');
     var settings={
       method: 'DELETE' ,
-      url: '/api/register/' ,
+      url: '/api/members/' ,
       data: {
         email: $( '#txtdelete' ).val().toLowerCase().trim()
       },
