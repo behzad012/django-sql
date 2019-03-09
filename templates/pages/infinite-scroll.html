@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>photo api</title>
+    <link rel="shortcut icon" type="image/png" href="../Images/myproject.png"/>
+    <link rel="stylesheet" href="../css/bootstrap4.1.0.min.css ">
+    <link rel="stylesheet" href="../css/project-proto2.0.3.css">
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body class="bg-info">
+    <nav class="flexmenu userSelect d-flex flex-wrap rtl" style="position: relative;">
+        <div class="flex-grow-1 mr-5 d-md-none">
+            <div class="container-icon mr-4 mt-1">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <div class="menuContainer d-md-flex flex-grow-1 userSelect">	
+            <ul id="flexmenu1" class="mymenu1 p-0 m-0 pr-md-5  d-md-flex">
+                <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#">صفحه اصلی</a></li>
+                <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#intro">معرفی محصول</a></li>
+                <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#gallery">گالری</a></li>
+                <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#specscroll">مشخصات</a></li>
+                <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#contact">ارتباط با ما</a></li>
+                <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href=""> سایر </a>
+                    <ul class="" style="background: #107180;">
+                        <li><a class="text-white" href="../pages/register.html">CRUD op</a></li>
+                        <li><a class="text-white" href="#"> photo api</a></li>
+                    </ul>				
+                </li>
+            </ul>
+        </div>
+        <ul>
+            <li id="login" class="mr-auto ml-3 "><a href="#"> </a></li>
+        </ul>
+    </nav>
+
+    <div class="my-3"></div>
+    <div class="container-fluid pt-3">
+        <form class="mb-3">
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <label class="text-white pt-1" for="txtGetPhoto">یک تگ وارد کنید:</label>
+                </div>
+                <div class="col-sm-6 my-1">
+                    <input type="text" class="form-control" id="txtGetPhoto" placeholder=" e.g. technology">
+                </div>
+                <div class="col-auto my-1">
+                    <button type="button" id="getPhoto" class="btn btn-outline-warning">دریافت اطلاعات</button>
+                </div>
+            </div>
+        </form>
+        <div id="photoResult" class="col-12 d-flex flex-wrap">
+        </div>
+
+    </div>
+</body>
+<script>
+    $(function(){ 
+        $( '#getPhoto' ).click(function(){
+            getPhotos(1);
+        });
+        $('.container-icon').on('click',function(){
+		$('.container-icon').toggleClass('change');
+		$('.menuContainer').stop(true).slideToggle(500);
+        });
+        $('.mymenu1 li').on('click',function(){
+            if((window).outerWidth<767){
+                $('.container-icon').click();
+            }
+        });
+    });
+    var page=0;
+    function getPhotos(p=null){
+        console.log( 'enter',flag );
+        
+        if(p!=null){
+            page=p;
+        }else{
+            page++;
+        }
+        var settings={
+            method: 'get' ,
+            // url:'/getPhotos.php',
+            url: 'https://api.unsplash.com/search/photos' ,
+            data: {
+                page: page,
+                query: $( '#txtGetPhoto' ).val().toLowerCase().trim(),
+                client_id: '943fee9de0736ad9f96d496d8f228b25a8ca71142d2afbf5c463ac9e1fcdac11',
+                per_page: '12'
+                // getphoto: 'getphoto'
+            },
+            timeout: 20000
+        };
+        $.ajax(settings).done(function(data){
+            flag=!flag;
+            $.each(data,function(i,value){
+                if(typeof(value)==='object'){
+                    $.each(value,function(i,v){
+                        $( '#photoResult' ).append
+                         ( $( '<img src="'+v.urls.regular+'" alt="" class="col-sm-6 col-md-4 col-lg-3 mb-2 img-fluid px-4 px-sm-1" style="height:300px;overflow:hidden;object-fit:cover;border-radius: 0.4rem;">' ) );
+                    });
+                }
+            //   $( '#photoResult' ).append
+            //     ( $( '<img src="'+value+'" alt="" class="col-sm-6 col-md-4 mb-2 img-fluid px-4 px-sm-1" style="height:300px;overflow:hidden;object-fit:cover;border-radius: 0.4rem;">' ) );
+            });
+        }).fail(function(err){
+            console.log( 'err: ',err );
+            $( '#photoResult' ).append( $( '<p/>' ).append(err.responseText) )
+        });
+    }
+    var flag=false;
+    var $wHeight=$(window).height();
+    var $dHeight=$(document).height();
+    $(window).scroll(function() {
+        console.log( '23232323' );
+        var $scrollTop = $(this).scrollTop();
+        var $height=$(window).scrollTop()+$wHeight+10;
+        var $dHeight=$(document).height();
+        if($height >= $dHeight) {
+            console.log( 'height high',flag );
+            if(flag){
+                flag=!flag;
+                getPhotos();
+            }
+        }
+    });
+
+</script>
+</html>

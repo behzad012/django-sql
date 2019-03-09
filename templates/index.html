@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+		{% load staticfiles %}
+	<meta charset="UTF-8">
+	<title>project-proto</title>
+	<link rel="shortcut icon" type="image/png" href="Images/myproject.png"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href=" {% static 'css/bootstrap4.1.0.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/project-proto2.0.3.css' %}" type="text/css">
+	<script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+</head>
+<body>
+<div class="container-fluid bg-info vw-100 vh-100 ltr position-relative  overflow-hidden ">
+	<nav class="flexmenu userSelect d-flex flex-wrap rtl">
+		<div class="flex-grow-1 mr-5 d-md-none">
+			<div class="container-icon mr-4 mt-1">
+			  <div class="bar1"></div>
+			  <div class="bar2"></div>
+			  <div class="bar3"></div>
+			</div>
+		</div>
+		<div class="menuContainer d-md-flex flex-grow-1 userSelect">	
+			<ul id="flexmenu1" class="mymenu1 p-0 m-0 pr-md-5  d-md-flex">
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#">صفحه اصلی</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#intro">معرفی محصول</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#gallery">گالری</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#specscroll">مشخصات</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#contact">ارتباط با ما</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href=""> سایر </a>
+					<ul>
+						<li><a class="text-white" href="pages/register.html">CRUD op</a></li>
+						<li><a class="text-white" href="pages/infinite-scroll.html"> photo api</a></li>
+					</ul>				
+				</li>
+			</ul>
+		</div>
+		<ul>
+			<li id="login" class="mr-auto ml-3 "><a href="#">ورود</a></li>
+		</ul>
+	</nav>
+	
+	<div class="row h-100 content-slides">
+		<div id="amin11" class="col-md-4 d-none d-md-flex flex-column animText text-left pr-0 my-auto justify-content-center align-items-center pt-3 position-relative">
+			<h1 class="left100 position-relative opacity0 text-center text-warning">ASUS ZenBook S13 </h1>
+			<h2 class="left100 position-relative opacity0 text-center ">Power and beauty, evolved </h2>
+			<h2 class="left100 position-relative opacity0 text-center ">Smaller Footprint </h2>
+			<h3 class="left100 position-relative opacity0 text-center ">The world’s most compact 13.9” laptop </h3>
+		</div>
+		<div class="col-md-8 d-flex justify-content-center align-items-center pt-md-3">
+			<img id="imgTitle1" class="imgTitle leftminus100 position-relative opacity0 w-100 img-fluid" src="{% static 'Images/3.png' %}" alt="">
+		</div>
+	</div>
+	
+	<div class="row h-100 content-slides">
+		<div id="amin21" class="col-md-4 d-none d-md-flex flex-column animText text-left pr-0 my-auto justify-content-center align-items-center pt-3 position-relative">
+			<h1 class="left100 position-relative opacity0 text-center text-warning">Windows 10 Pro </h1>
+			<h1 class="left100 position-relative opacity0 text-center ">Core™i7 </h1>
+			<h2 class="left100 position-relative opacity0 text-center ">NVIDIA®MX150 </h2>
+			<h2 class="left100 position-relative opacity0 text-center ">16GB RAM  </h2>
+		</div>
+		<div class="col-md-8 d-flex justify-content-center align-items-center">
+			<img id="imgTitle2" class="imgTitle leftminus100 position-relative opacity0 w-100 img-fluid" src="{% static 'Images/1.png' %}" alt="">
+		</div>
+	</div>
+	
+	<div class="row h-100 content-slides">
+		<div id="amin31" class="col-md-4 d-none d-md-flex flex-column animText text-left pr-0 my-auto justify-content-center align-items-center pt-3 position-relative">
+			<h1 class="left100 position-relative opacity0 text-center text-warning">All-metal chassis</h1>
+			<h1 class="left100 position-relative opacity0 text-center ">CNC milled </h1>
+			<h2 class="left100 position-relative opacity0 text-center ">Spun-metal finish</h2>
+			<h2 class="left100 position-relative opacity0 text-center ">Utopia Blue </h2>
+		</div>
+		<div class="col-md-8 d-flex justify-content-center align-items-center">
+			<img id="imgTitle3" class="imgTitle leftminus100 position-relative opacity0 w-100 img-fluid" src="{% static 'Images/2.png' %}" alt="">
+		</div>
+	</div>
+	
+	<div id="slideDots" class="slideDots rtl">
+		<span class="spanDots" name="0"></span>
+		<span class="spanDots" name="1"></span>
+		<span class="spanDots" name="2"></span>
+	</div>
+</div>
+<div class="modal-cover userSelect none">
+	<div class="m-content">
+		<span class="closeModal">+</span>
+		<h2 class="mb-3">ورود</h2>
+		<form>
+			<input type="email" class="form-control none rtl mb-3" name="" placeholder="ایمیل">
+			<input type="password" class="form-control none rtl mb-3" name="" placeholder="پسورد" >
+			<p class="mb-3 text-justify none">لورم ایپسوم چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط  می باشد.</p>
+			<input type="submit" value="ورود"  class="btn btn-info userSelect btn-block none submit" >
+			
+		</form>
+	</div>
+</div>
+<div id="intro" class="row md-vw md-vh mx-0 overflow-hidden ">
+		<div id="amin42" class="col-md-6 d-flex flex-column position-relative text-center pr-5 my-auto justify-content-center align-items-center pt-3">
+			<h1 class="left100 position-relative opacity0 text-info">ASUS ZenBook S13 </h1>
+			<h2 class="left100 position-relative opacity0 ">Power and beauty, evolved </h2>
+			<h2 class="left100 position-relative opacity0 ">Smaller Footprint </h2>
+			<h3 class="left100 position-relative opacity0 ">The world’s most compact 13.9” laptop </h3>
+		</div>
+		<div class="col-md-6 d-flex justify-content-center align-items-center  pl-5">
+			<img id="amin41" class="img-fluid w-100 position-relative leftminus100" src="{% static 'Images/4-1.jpg' %}" alt="" style="object-fit: contain;">
+		</div>
+</div>
+
+	
+  <section id="gallery" class="bg-secondary py-4">
+    <div class="container-fluid">
+      <div class="row text-white text-center">
+        <div class="col m-4">
+          <h1 class="display-4 mb-4">ASUS ZenBook S13</h1>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6  my-5" style="height: 400px;">
+          <div class="card border-0 card-shadow w-100 h-100 pointer myFilter modalImg" data-modalcaption="ASUS ZenBook S13" data-modalsrc="{% static 'Images/c-1.jpg' %}" style="background: url({% static 'Images/c-1.jpg' %}) no-repeat center/cover">
+            <div class="card-img-overlay overflow-hidden">
+              <h5 class="text-white font-weight-bold p-3 heading">ASUS ZenBook S13</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 my-5 " style="height: 400px;">
+          <div class="card border-0 card-shadow w-100 h-100 pointer myFilter modalImg" data-modalcaption="ASUS ZenBook S13" data-modalsrc="{% static 'Images/c-2.jpg' %}" style="background: url({% static 'Images/c-2.jpg' %}) no-repeat center/cover">
+            <div class="card-img-overlay overflow-hidden">
+              <h5 class="text-white font-weight-bold p-3 heading">ASUS ZenBook S13</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 my-5 " style="height: 400px;">
+          <div class="card border-0 card-shadow w-100 h-100 pointer myFilter modalImg" data-modalcaption="ASUS ZenBook S13" data-modalsrc="{% static 'Images/c-3.jpg' %}" style="background: url({% static 'Images/c-3.jpg' %}) no-repeat center/cover">
+            <div class="card-img-overlay overflow-hidden">
+              <h5 class="text-white font-weight-bold p-3 heading">ASUS ZenBook S13</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 my-5 " style="height: 400px;">
+          <div class="card border-0 card-shadow w-100 h-100 pointer myFilter modalImg" data-modalcaption="ASUS ZenBook S13" data-modalsrc="{% static 'Images/c-4.jpg' %}" style="background: url({% static 'Images/c-4.jpg' %}) no-repeat center/cover">
+            <div class="card-img-overlay overflow-hidden">
+              <h5 class="text-white font-weight-bold p-3 heading">ASUS ZenBook S13</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 my-5 " style="height: 400px;">
+          <div class="card border-0 card-shadow w-100 h-100 pointer myFilter modalImg" data-modalcaption="ASUS ZenBook S13" data-modalsrc="{% static 'Images/c-5.jpg' %}" style="background: url({% static 'Images/c-5.jpg' %}) no-repeat center/cover">
+            <div class="card-img-overlay overflow-hidden">
+              <h5 class="text-white font-weight-bold p-3 heading">ASUS ZenBook S13</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 my-5 " style="height: 400px;">
+          <div class="card border-0 card-shadow w-100 h-100 pointer myFilter modalImg" data-modalcaption="ASUS ZenBook S13" data-modalsrc="{% static 'Images/c-6.jpg' %}" style="background: url({% static 'Images/c-6.jpg' %}) no-repeat center/cover">
+            <div class="card-img-overlay overflow-hidden">
+              <h5 class="text-white font-weight-bold p-3 heading">ASUS ZenBook S13</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<h3 id="specscroll" class="bg-light vw-100 pt-3 px-3 rtl bg-light font-weight-bold"> مشخصات فنی: </h3>
+<div id="specs" class="d-md-none w-100 pb-3 px-3">
+	<div class="specs-title addplus text-center w-100 text-white align-bottom">مشخصات فیزیکی </div>
+	<div class=" acc-specs overflow-hidden " style=" display: none;">
+		<div class="specs-item w-100">
+			<table class="table mt-0">
+			  <tbody>
+				<tr>
+				  <td scope="row">ابعاد</td>
+				  <td> 15.9 × 225 × 324 میلی‌متر </td>
+				</tr>
+				<tr>
+				  <td scope="row">وزن</td>
+				  <td> 1.25 کیلوگرم </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>	
+	<div class="specs-title addplus text-center w-100 text-white align-bottom">پردازنده مرکزی </div>
+	<div class=" acc-specs overflow-hidden " style=" display: none;">
+		<div class="specs-item w-100">
+			<table class="table mt-0">
+			  <tbody>
+				<tr>
+				  <td scope="row">سری پردازنده</td>
+				  <td>  Core i5  </td>
+				</tr>
+				<tr>
+				  <td scope="row">مدل پردازنده</td>
+				  <td>  3317U  </td>
+				</tr>
+				  <tr>
+				  <td scope="row"> فرکانس پردازنده </td>
+				  <td>   1.7GHz UpTo 2.6 GHz   </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>	
+	<div class="specs-title addplus text-center w-100 text-white align-bottom">حافظه RAM </div>
+	<div class=" acc-specs overflow-hidden " style=" display: none;">
+		<div class="specs-item w-100">
+			<table class="table mt-0">
+			  <tbody>
+				  <tr>
+				  <td scope="row">ظرفیت حافظه RAM</td>
+				  <td>   6 گیگابایت   </td>
+				</tr>
+				<tr>
+				  <td scope="row">نوع حافظه RAM</td>
+				  <td>  DDR4  </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+	<div class="specs-title addplus text-center w-100 text-white align-bottom">حافظه داخلی </div>
+	<div class=" acc-specs overflow-hidden " style=" display: none;">
+		<div class="specs-item w-100">
+			<table class="table mt-0">
+			  <tbody>
+				  <tr>
+				  <td scope="row">ظرفیت حافظه داخلی</td>
+				  <td>   یک ترابایت   </td>
+				</tr>
+				<tr>
+				  <td scope="row">مشخصات حافظه داخلی</td>
+				  <td>   + 24GB SSD   </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+	<div class="specs-title addplus text-center w-100 text-white align-bottom">پردازنده گرافیکی </div>
+	<div class=" acc-specs overflow-hidden " style=" display: none;">
+		<div class="specs-item w-100">
+			<table class="table mt-0">
+			  <tbody>
+				  <tr>
+				  <td scope="row">مدل پردازنده گرافیکی</td>
+				  <td>   GeForce GT 635M DDR3 VRAM   </td>
+				</tr>
+				<tr>
+				  <td scope="row">حافظه اختصاصی پردازنده گرافیکی</td>
+				  <td>  2GB  </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+	<div class="specs-title addplus text-center w-100 text-white align-bottom">صفحه نمایش </div>
+	<div class=" acc-specs overflow-hidden " style=" display: none;">
+		<div class="specs-item w-100">
+			<table class="table mt-0">
+			  <tbody>
+				  <tr>
+				  <td scope="row">اندازه صفحه نمایش</td>
+				  <td>   15.6 اینچ   </td>
+				</tr>
+				<tr>
+				  <td scope="row">نوع صفحه نمایش</td>
+				  <td>   TFT LED-backlit LCD   </td>
+				</tr>
+				<tr>
+				  <td scope="row"> صفحه نمایش لمسی </td>
+				  <td>    بله   </td>
+				</tr>
+				<tr>
+				  <td scope="row"> دقت صفحه نمایش </td>
+				  <td>    HD|1366x768    </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+	<div class="specs-title addplus text-center w-100 text-white align-bottom">امکانات </div>
+	<div class=" acc-specs overflow-hidden " style=" display: none;">
+		<div class="specs-item w-100">
+			<table class="table mt-0">
+			  <tbody>
+				 <tr>
+				  <td scope="row">مشخصات اسپیکر</td>
+				  <td>   اسپیکر داخلی استریو   </td>
+				</tr>
+				<tr>
+				  <td scope="row">پورت شبکه Ethernet</td>
+				  <td>   10/100/1000 Base T   </td>
+				</tr>
+				  <tr>
+				  <td scope="row"> پورت HDMI </td>
+				  <td>    دارد    </td>
+				</tr>
+				 <tr>
+				  <td scope="row">تعداد پورت USB 3.0</td>
+				  <td>   1   </td>
+				</tr>
+				 <tr>
+				  <td scope="row">تعداد پورت USB 2.0</td>
+				  <td>   2   </td>
+				</tr> 
+			  </tbody>
+			</table>
+		</div>
+	</div>
+	<div class="specs-title addplus text-center w-100 text-white align-bottom">سایر مشخصات </div>
+	<div class=" acc-specs overflow-hidden " style=" display: none;">
+		<div class="specs-item w-100">
+			<table class="table mt-0">
+			  <tbody>
+				  <tr>
+				  <td scope="row">نوع باتری</td>
+				  <td>   4 سلولی   </td>
+				</tr>
+				<tr>
+				  <td scope="row">توضیحات باتری</td>
+				  <td>  باتری لیتیوم-یون 4 سلولی لیتیوم پلیمری 44 وات ساعتی   </td>
+				</tr>
+				  <tr>
+				  <td scope="row"> سیستم عامل</td>
+				  <td>    Microsoft Windows 10    </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+	
+<div class="d-none d-md-block">
+	<ul id="specsid" class="d-flex list-inline bg-secondary mr-0 text-white">
+		<li class="flex-grow-1 px-2 py-3 text-center " name="num1">مشخصات فیزیکی</li>
+		<li class="flex-grow-1 px-2 py-3 text-center " name="num2">پردازنده مرکزی</li>
+		<li class="flex-grow-1 px-2 py-3 text-center " name="num3">حافظه RAM</li>
+		<li class="flex-grow-1 px-2 py-3 text-center " name="num4">حافظه داخلی</li>
+		<li class="flex-grow-1 px-2 py-3 text-center " name="num5">پردازنده گرافیکی</li>
+		<li class="flex-grow-1 px-2 py-3 text-center " name="num6">صفحه نمایش</li>
+		<li class="flex-grow-1 px-2 py-3 text-center " name="num7">امکانات</li>
+		<li class="flex-grow-1 px-2 py-3 text-center " name="num8">سایر مشخصات</li>
+	</ul>
+</div>	
+
+<div class="d-none d-md-block" style="height: 350px;overflow: hidden;">
+	<div class="specs row overflow-hidden num1" style="height:350px; display: none;">
+		<div class="specs-item col-6">
+			<table class="table mt-3">
+			  <thead class="thead-light">
+				<tr>
+				  <th scope="col">مشخصات فیزیکی</th>
+				  <th ></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td scope="row">ابعاد</td>
+				  <td> 15.9 × 225 × 324 میلی‌متر </td>
+				</tr>
+				<tr>
+				  <td scope="row">وزن</td>
+				  <td> 1.25 کیلوگرم </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="specs-item col-6 m-0 pt-0 px-5 pb-5 text-centerr overflow-hidden">
+			<div class="w-100 h-100" style="background: url({% static 'Images/specs/8.jpg' %}) no-repeat center/contain"></div>
+		</div>
+	</div>	
+	
+	<div class="specs row overflow-hidden num2" style="height:350px; display: none;">
+		<div class="specs-item col-6">
+			<table class="table mt-3">
+			  <thead class="thead-light">
+				<tr>
+				  <th scope="col">پردازنده مرکزی</th>
+				  <th ></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td scope="row">سری پردازنده</td>
+				  <td>  Core i5  </td>
+				</tr>
+				<tr>
+				  <td scope="row">مدل پردازنده</td>
+				  <td>  3317U  </td>
+				</tr>
+				  <tr>
+				  <td scope="row"> فرکانس پردازنده </td>
+				  <td>   1.7GHz UpTo 2.6 GHz   </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="specs-item col-6 m-0 pt-0 px-5 pb-5 text-centerr overflow-hidden">
+			<div class="w-100 h-100" style="background: url({% static 'Images/specs/cpu.png' %}) no-repeat center/contain"></div>
+		</div>
+	</div>	
+
+	<div class="specs row overflow-hidden num3" style="height:350px; display: none;">
+		<div class="specs-item col-6">
+			<table class="table mt-3">
+			  <thead class="thead-light">
+				<tr>
+				  <th scope="col">حافظه RAM</th>
+				  <th ></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td scope="row">ظرفیت حافظه RAM</td>
+				  <td>   6 گیگابایت   </td>
+				</tr>
+				<tr>
+				  <td scope="row">نوع حافظه RAM</td>
+				  <td>  DDR4  </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="specs-item col-6 m-0 pt-0 px-5 pb-5 text-centerr overflow-hidden">
+			<div class="w-100 h-100" style="background: url({% static 'Images/specs/ram.JPG' %}) no-repeat center/contain"></div>
+		</div>
+	</div>	
+
+	<div class="specs row overflow-hidden num4" style="height:350px; display: none;">
+		<div class="specs-item col-6">
+			<table class="table mt-3">
+			  <thead class="thead-light">
+				<tr>
+				  <th scope="col">حافظه داخلی</th>
+				  <th ></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td scope="row">ظرفیت حافظه داخلی</td>
+				  <td>   یک ترابایت   </td>
+				</tr>
+				<tr>
+				  <td scope="row">مشخصات حافظه داخلی</td>
+				  <td>   + 24GB SSD   </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="specs-item col-6 m-0 pt-0 px-5 pb-5 text-centerr overflow-hidden">
+			<div class="w-100 h-100" style="background: url({% static 'Images/specs/ssd.jpg' %}) no-repeat center/contain"></div>
+		</div>
+	</div>	
+
+	<div class="specs row overflow-hidden num5" style="height:350px; display: none;">
+		<div class="specs-item col-6">
+			<table class="table mt-3">
+			  <thead class="thead-light">
+				<tr>
+				  <th scope="col">پردازنده گرافیکی</th>
+				  <th ></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td scope="row">مدل پردازنده گرافیکی</td>
+				  <td>   GeForce GT 635M DDR3 VRAM   </td>
+				</tr>
+				<tr>
+				  <td scope="row">حافظه اختصاصی پردازنده گرافیکی</td>
+				  <td>  2GB  </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="specs-item col-6 m-0 pt-0 px-5 pb-5 text-centerr overflow-hidden">
+			<div class="w-100 h-100" style="background: url({% static 'Images/specs/gpu.jpg' %}) no-repeat center/contain"></div>
+		</div>
+	</div>	
+
+	<div class="specs row overflow-hidden num6" style="height:350px; display: none;">
+		<div class="specs-item col-6">
+			<table class="table mt-3">
+			  <thead class="thead-light">
+				<tr>
+				  <th scope="col">صفحه نمایش</th>
+				  <th ></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td scope="row">اندازه صفحه نمایش</td>
+				  <td>   15.6 اینچ   </td>
+				</tr>
+				<tr>
+				  <td scope="row">نوع صفحه نمایش</td>
+				  <td>   TFT LED-backlit LCD   </td>
+				</tr>
+				<tr>
+				  <td scope="row"> صفحه نمایش لمسی </td>
+				  <td>    بله   </td>
+				</tr>
+				<tr>
+				  <td scope="row"> دقت صفحه نمایش </td>
+				  <td>    HD|1366x768    </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="specs-item col-6 m-0 pt-0 px-5 pb-5 text-centerr overflow-hidden">
+			<div class="w-100 h-100" style="background: url({% static 'Images/specs/display.jpg' %}) no-repeat center/contain"></div>
+		</div>
+	</div>	
+
+	<div class="specs row overflow-hidden num7" style="height:350px; display: none;">
+		<div class="specs-item col-6">
+			<table class="table mt-3">
+			  <thead class="thead-light">
+				<tr>
+				  <th scope="col">امکانات</th>
+				  <th ></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td scope="row">مشخصات اسپیکر</td>
+				  <td>   اسپیکر داخلی استریو   </td>
+				</tr>
+				<tr>
+				  <td scope="row">پورت شبکه Ethernet</td>
+				  <td>   10/100/1000 Base T   </td>
+				</tr>
+				  <tr>
+				  <td scope="row"> پورت HDMI </td>
+				  <td>    دارد    </td>
+				</tr>
+				 <tr>
+				  <td scope="row">تعداد پورت USB 3.0</td>
+				  <td>   1   </td>
+				</tr>
+				 <tr>
+				  <td scope="row">تعداد پورت USB 2.0</td>
+				  <td>   2   </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="specs-item col-6 m-0 pt-0 px-5 pb-5 text-centerr overflow-hidden">
+			<div class="w-100 h-100" style="background: url({% static 'Images/specs/other.jpg' %}) no-repeat center/contain"></div>
+		</div>
+	</div>	
+
+	<div class="specs row overflow-hidden num8" style="height:350px; display: none;">
+		<div class="specs-item col-6">
+			<table class="table mt-3">
+			  <thead class="thead-light">
+				<tr>
+				  <th scope="col">سایر مشخصات</th>
+				  <th ></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td scope="row">نوع باتری</td>
+				  <td>   4 سلولی   </td>
+				</tr>
+				<tr>
+				  <td scope="row">توضیحات باتری</td>
+				  <td>  باتری لیتیوم-یون 4 سلولی لیتیوم پلیمری 44 وات ساعتی   </td>
+				</tr>
+				  <tr>
+				  <td scope="row"> سیستم عامل</td>
+				  <td>    Microsoft Windows 10    </td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="specs-item col-6 m-0 pt-0 px-5 pb-5 text-center overflow-hidden">
+			<div class="w-100 h-100" style="background: url({% static 'Images/specs/utilities.jpg' %}) no-repeat center/contain"></div>
+		</div>
+	</div>	
+</div>
+	
+<div id="posAnim61" class="container-fluid contact overflow-hidden">
+     <section id="contact" class="p-md-5 pt-5">
+             <div class="row">
+                <div class="col text-center">
+                    <h1 class="text-warning ">ارتباط با ما</h1>
+                    <p class="lead text-white d-none d-md-block">لورم ایپسومچاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط  می باشد. </p>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="height: 280px;">
+                <div class="col col-md-8 col-lg-6">
+                    <div>  
+					  	 <form>
+							<div class="form-group">
+								<input type="text" class="left100 position-relative opacity0 form-control" id="name" placeholder="نام">
+							</div>
+							<div class="form-group">
+								<input type="text" class="left100 position-relative opacity0 form-control" id="email" placeholder="ایمیل">
+							</div>
+							<div class="form-group">
+								<textarea class="left100 position-relative opacity0 form-control" id="message" rows="3" placeholder="متن پیام"></textarea>
+							</div>
+							<input class="left100 position-relative opacity0 btn btn-outline-warning btn-block" type="submit" value="ارسال">
+					  	</form>
+					</div>
+                </div>
+            </div>
+     </section>
+</div>
+	
+  <footer class="bg-dark px-5 ">
+      <div id="posAnim71" class="row text-light py-4 overflow-hidden">
+        <div class="top100 position-relative opacity0 col-md-4 col-sm-6">
+          <h5 class="pb-3 text-info">درباره ما</h5>
+          <p class="small">حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها  اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+        </div>
+        <div class="top100 position-relative opacity0 col-md-4 col-sm-6">
+          <h5 class="pb-3 px-sm-4 text-info">آخرین مقالات</h5>
+          <ul class="list-unstyled pr-0  pr-sm-4">
+            <li><a href="#" class="footer-link">لورم ایپسوم 1</a></li>
+            <li> <a href="#" class="footer-link">لورم ایپسوم 2</a></li>
+            <li>
+              <a href="#" class="footer-link">لورم ایپسوم 3</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">لورم ایپسوم 4</a>
+            </li>
+          </ul>
+        </div>
+        <div class="top100 position-relative opacity0 col-md-4 col-sm-12">
+          <h5 class="pb-3 text-info">تماس با ما</h5>
+          <p class="small">با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها  اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+			<span>تلفن: </span>
+			<span> 02186868686 </span>
+        </div>
+      </div>
+  </footer>
+  
+	
+	
+</body>
+<script src="{% static 'js/project-proto2.0.3.js' %}"></script>
+</html>
