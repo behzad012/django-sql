@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-		{% load staticfiles %}
+	{% load staticfiles %}
 	<meta charset="UTF-8">
 	<title>project-proto</title>
-	<link rel="shortcut icon" type="image/png" href="Images/myproject.png"/>
+	<link rel="shortcut icon" type="image/png" href="{% static 'Images/myproject.png' %}"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href=" {% static 'css/bootstrap4.1.0.min.css' %}" type="text/css">
 	<link rel="stylesheet" href="{% static 'css/project-proto2.0.3.css' %}" type="text/css">
@@ -29,8 +29,8 @@
 				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#contact">ارتباط با ما</a></li>
 				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href=""> سایر </a>
 					<ul>
-						<li><a class="text-white" href="pages/register.html">CRUD op</a></li>
-						<li><a class="text-white" href="pages/infinite-scroll.html"> photo api</a></li>
+						<li><a class="text-white" href="{% url 'register' %}">CRUD op</a></li>
+						<li><a class="text-white" href="{% url 'infinite-scroll' %}"> photo api</a></li>
 					</ul>				
 				</li>
 			</ul>

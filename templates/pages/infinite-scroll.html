@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load staticfiles %}  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>photo api</title>
-    <link rel="shortcut icon" type="image/png" href="../Images/myproject.png"/>
-    <link rel="stylesheet" href="../css/bootstrap4.1.0.min.css ">
-    <link rel="stylesheet" href="../css/project-proto2.0.3.css">
-    <script src="../js/jquery-3.3.1.js"></script>
+    <link rel="shortcut icon" type="image/png" href="{% static 'Images/myproject.png' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap4.1.0.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/project-proto2.0.3.css' %}">
+    <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
 </head>
 <body class="bg-info">
     <nav class="flexmenu userSelect d-flex flex-wrap rtl" style="position: relative;">
@@ -21,15 +22,15 @@
         </div>
         <div class="menuContainer d-md-flex flex-grow-1 userSelect">	
             <ul id="flexmenu1" class="mymenu1 p-0 m-0 pr-md-5  d-md-flex">
-                <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#">صفحه اصلی</a></li>
+                <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="{% url 'home' %}">صفحه اصلی</a></li>
                 <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#intro">معرفی محصول</a></li>
                 <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#gallery">گالری</a></li>
                 <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#specscroll">مشخصات</a></li>
                 <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="../index.html#contact">ارتباط با ما</a></li>
                 <li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href=""> سایر </a>
                     <ul class="" style="background: #107180;">
-                        <li><a class="text-white" href="../pages/register.html">CRUD op</a></li>
-                        <li><a class="text-white" href="#"> photo api</a></li>
+                        <li><a class="text-white" href="{% url 'register' %}">CRUD op</a></li>
+                        <li><a class="text-white" href="{% url 'infinite-scroll' %}"> photo api</a></li>
                     </ul>				
                 </li>
             </ul>

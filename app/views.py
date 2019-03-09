@@ -7,3 +7,6 @@ def home(request):
 
 def register(request):
     return render(request, 'pages/register.html', {})
+
+def infinite(request):
+    return render(request, 'pages/infinite-scroll.html', {})

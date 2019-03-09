@@ -2,192 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1598ca6-9009-4a84-9335-c63eb87a4961" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/django_sql_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/c-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/c-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/c-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/c-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/c-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/c-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/myproject.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/specs/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/specs/cpu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/specs/display.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/specs/gpu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/specs/other.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/specs/ram.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/specs/ssd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/Images/specs/utilities.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap4.1.0.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/css/project-proto2.0.3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/font/IRANSansWeb.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/js/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/js/project-proto2.0.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/js/register1.1.12.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_sql_1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_sql_1/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_sql_1/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_sql_1/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/autocomplete.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/changelists.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/forms.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/responsive_rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/LICENSE-SELECT2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/widgets.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/fonts/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Bold-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Light-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-no.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-viewlink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/SelectBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/actions.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/autocomplete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/cancel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/change_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/collapse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/collapse.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/inlines.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/inlines.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/jquery.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/popup_response.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/timeparse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/urlify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/css/print.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/css/toolbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/img/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/img/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/img/back_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/img/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/img/close_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/img/djdt_vertical.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/img/indicator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/js/redirect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/js/toolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/js/toolbar.profiling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/js/toolbar.sql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/debug_toolbar/js/toolbar.timer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/infinite-scroll.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/project-proto2.0.3.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/project-proto2.0.3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_sql_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_sql_1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_sql_1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_sql_1/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/infinite-scroll.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/infinite-scroll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -198,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_sql_1/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="193">
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_sql_1/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -219,8 +40,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="231">
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -248,10 +69,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/django_sql_1/urls.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/django_sql_1/settings.py" />
+        <option value="$PROJECT_DIR$/django_sql_1/urls.py" />
+        <option value="$PROJECT_DIR$/app/views.py" />
       </list>
     </option>
   </component>
@@ -355,7 +176,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -401,27 +222,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_sql_1/urls.py">
+    <entry file="file://$PROJECT_DIR$/django_sql_1/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        <state relative-caret-position="193">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="231">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_sql_1/settings.py">
+    <entry file="file://$PROJECT_DIR$/django_sql_1/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        <state relative-caret-position="214">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>

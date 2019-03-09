@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
     path('pages/register/',views.register, name='register' ),
+    path('pages/infinite-scroll/',views.infinite, name='infinite-scroll' ),
 ]
 
 
