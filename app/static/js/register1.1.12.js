@@ -24,7 +24,8 @@ function registerForm(e){
       data: {
         name: $( '#txtRegister1' ).val().toLowerCase().trim(),
         password: $( '#txtRegister2' ).val().trim(),
-        email: $( '#txtRegister3' ).val().toLowerCase().trim()
+        email: $( '#txtRegister3' ).val().toLowerCase().trim(),
+        register: 'register'
       },
       timeout: 10000,
       cache: false
@@ -203,7 +204,7 @@ function registerForm(e){
   function deleteForm(){
     $( '#deleteResult' ).css('opacity','.2');
     var settings={
-      method: 'DELETE' ,
+      method: 'post' ,
       url: '/api/members/' ,
       beforeSend: function(xhr, settings) {
         if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
@@ -212,17 +213,15 @@ function registerForm(e){
       },
       data: {
         email: $( '#txtdelete' ).val().toLowerCase().trim(),
+        delete: 'delete'
         // csrftoken: jQuery("[name=csrfmiddlewaretoken]").val()
       },
       timeout: 10000,
-      cache: false,
-      processData: false,
+      cache: false
     };
     $.ajax(settings).done(function(data){
-      console.log( data );
       $( '#deleteResult' ).css('opacity','1');
       $( 'div#deleteResult' ).html( '<p class="text-primary">حذف با موفقیت انجام شد</p><p>'+$( '#txtdelete' ).val().toLowerCase().trim()+'</p>' );
-      $( 'div#deleteResult' ).append(data);
     }).fail(function(err){
       $( '#deleteResult' ).css('opacity','1');
       $( 'div#deleteResult' ).html( '<h3 class="text-danger">خطا </h3>' ).append('<p class="text-danger">آدرس ایمیل نامعتبر است </p>');

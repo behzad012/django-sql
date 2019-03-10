@@ -185,18 +185,15 @@
             <div class="row px-3 my-3">
                 <div class="col-sm10 col-md-9 col-lg-7 ">
                     <div class=" input-group pr-3">
-                        <form action="">{% csrf_token %}
-                                <label class="col-12 mb-2 px-0" for="txtdelete"> آدرس ایمیل: </label>
-                                <input type="email" name="text1" id="txtdelete" class="form-control" placeholder="آدرس ایمیل را وارد کنید" style="border-top-right-radius: 2px; border-bottom-right-radius: 2px;border-top-left-radius: 0;border-bottom-left-radius: 0;box-shadow: none;">
-                                <div class="input-group-append">
-                                    <button id="deletebtn" class="btn btn-outline-info" type="button" style="box-shadow: none;width: 100px;">حذف</button>
-                                </div>
-                        </form>
-                        
+                        <label class="col-12 mb-2 px-0" for="txtdelete"> آدرس ایمیل: </label>
+                        <input type="email" name="text1" id="txtdelete" class="form-control" placeholder="آدرس ایمیل را وارد کنید" style="border-top-right-radius: 2px; border-bottom-right-radius: 2px;border-top-left-radius: 0;border-bottom-left-radius: 0;box-shadow: none;">
+                        <div class="input-group-append">
+                            <button id="deletebtn" class="btn btn-outline-info" type="button" style="box-shadow: none;width: 100px;">حذف</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 mt-4">
-                    <div class="px-4" id="deleteResult" style="overflow:auto;"></div>
+                    <div class="px-4" id="deleteResult" style=""></div>
                 </div>
             </div>
         </div>

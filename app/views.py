@@ -21,8 +21,7 @@ def infinite(request):
 @cache_page(60 * 15)
 @csrf_protect
 def members(request):
-    print('---------------------------------------------------------------------')
-    if(request.method=='POST'):
+    if( request.POST.get('register',False)):
         try:
             registerName = request.POST['name']
             registerPassword = request.POST['password']
@@ -53,10 +52,13 @@ def members(request):
         except Exception as e:
             return HttpResponseBadRequest(e)
 
-    if(request.method=='DELETE'):
+    if( request.POST.get('delete',False) ):
         try:
-            member = registers.objects.get(email=request.DELETE['email'])
-            return HttpResponse(member)
+            print('<<<<','enter delete','>>>>>>')
+            member = registers.objects.get(email=request.POST['email'])
+            member.delete()
+            print('===',member,'====')
+            return HttpResponse('deleted!')
         except Exception as e:
             return HttpResponseBadRequest(e)
     return Http404()
@@ -65,14 +67,6 @@ def members(request):
 @cache_page(60 * 15)
 @csrf_protect
 def search(request):
-    # member = registers.objects.get(email=request.GET['email'])
-    # print('===============================')
-    # result = {'name': member.name,
-    #           'password': member.password,
-    #           'email': member.email,
-    #           'date': member.date}
-    # print(json.dumps(result,cls=DjangoJSONEncoder))
-    # print('===============================')
     try:
         member = registers.objects.get(email=request.GET['email'])
         result = {'نام': member.name,
