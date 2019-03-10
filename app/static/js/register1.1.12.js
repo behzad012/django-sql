@@ -30,8 +30,9 @@ function registerForm(e){
       cache: false
       
     };
-    $.ajax(settings).done(function(data){
-      console.log( data );
+    $.ajax(settings).done(function(data1){
+      console.log( JSON.parse(data1) );
+      data=JSON.parse(data1);
       $( '#registerinfo' ).css('opacity','1');
       try{
         var $table=$( '<table class="table table-striped"/>' ).append($('<tbody/>'));
@@ -44,7 +45,7 @@ function registerForm(e){
       }
     }).fail(function(err){
         $( '#registerinfo' ).css('opacity','1');
-        $( 'div#registerinfo' ).html( '<h3 class="text-danger">خطا </h3>' ).append(JSON.stringify(err.responseText));
+        $( 'div#registerinfo' ).html( '<h3 class="text-danger">خطا </h3>' ).append('<p>'+err.responseText+'</P>');
     });
   }
   
@@ -174,8 +175,8 @@ function registerForm(e){
       cache: false
 
     };
-    $.ajax(settings).done(function(data){
-      console.log( typeof(data) );
+    $.ajax(settings).done(function(data1){
+      data=JSON.parse(data1);
       $( '#searchResult' ).css('opacity','1');
       try{
         var $table=$( '<table class="table table-striped"/>' ).append($('<tbody/>'));
@@ -184,7 +185,7 @@ function registerForm(e){
         });
         $( 'div#searchResult' ).html( '<p class="text-primary"> جستجو با موفقیت انجام شد</p><h3 class=""> مشخصات کاربر</h3>' ).append($table);
       }catch{
-        $( 'div#searchResult' ).html(JSON.stringify(data));
+        $( 'div#searchResult' ).html('<p>'+data+'</P>');
       }
     }).fail(function(err){
       $( '#searchResult' ).css('opacity','1');
