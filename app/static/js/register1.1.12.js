@@ -90,7 +90,8 @@ function registerForm(e){
       timeout: 10000,
       cache: false
     };
-    $.ajax(settings).done(function(data){
+    $.ajax(settings).done(function(data1){
+      data=JSON.parse(data1)
       $( '#searchinfo' ).css('opacity','1');
       $( '#userinfo' ).css('display','block');
       $( 'div#searchinfo' ).html( '<p class="text-primary"> جستجو با موفقیت انجام شد</p>' );
@@ -100,15 +101,11 @@ function registerForm(e){
           $( '#txtupdate'+i ).val(value.toString());
         });
       }catch{
-        $( 'div#searchResult' ).html(JSON.stringify(data));
+        $( 'div#searchResult' ).html('<p>'+JSON.stringify(data)+'</P>');
       }
       }).fail(function(err){
         $( '#searchinfo' ).css('opacity','1');
-        var $table=$( '<table class="table table-striped"/>' ).append($('<tbody/>'));
-        $.each(err,function(i,value){
-          $table.append( $( '<tr/>' ).append('<td>'+i+'</td>'+'<td>'+value+'</td>') )
-        });
-        $( 'div#searchinfo' ).html( '<h3 class="text-danger">خطا </h3>' ).append('<p class="text-danger">آدرس ایمیل نامعتبر است </p>').append($table);
+        $( 'div#searchinfo' ).html( '<h3 class="text-danger">خطا </h3>' ).append('<p class="text-danger">آدرس ایمیل نامعتبر است </p>');
       });
   }
 
@@ -116,7 +113,7 @@ function registerForm(e){
   function updateForm(){
     $( '#updateinfo' ).css('opacity','.3');
     var settings={
-      method: 'PUT' ,
+      method: 'post' ,
       url: '/api/members/' ,
       beforeSend: function(xhr, settings) {
         if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
@@ -126,12 +123,14 @@ function registerForm(e){
       data: {
         name: $( '#txtupdate0' ).val().toLowerCase().trim(),
         password: $( '#txtupdate1' ).val().trim(),
-        email: $( '#txtupdate2' ).val().toLowerCase().trim()
+        email: $( '#txtupdate2' ).val().toLowerCase().trim(),
+        update:'update'
       },
       timeout: 10000,
       cache: false
     };
-    $.ajax(settings).done(function(data){
+    $.ajax(settings).done(function(data1){
+      data=JSON.parse(data1);
       $( '#updateinfo' ).css('display','block');
       $( '#updateinfo' ).css('opacity','1');
       try{
@@ -141,7 +140,7 @@ function registerForm(e){
         });
         $( 'div#updateinfo' ).html( '<p class="text-primary">بروزرسانی با موفقیت انجام شد</p><h3 class=""> مشخصات کاربر</h3>' ).append($table);
       }catch{
-        $( 'div#updateinfo' ).html(JSON.stringify(data));
+        $( 'div#updateinfo' ).html('<p>'+JSON.stringify(data)+'</P>');
       }
     }).fail(function(err){
         $( '#updateinfo' ).css('display','block');

@@ -40,15 +40,27 @@ def members(request):
     if (request.method == 'GET'):
         try:
             member = registers.objects.get(email=request.GET['email'])
-            return HttpResponse('GET ok!')
+            result = {0: member.name,
+                      1: member.password,
+                      2: member.email}
+            return HttpResponse(json.dumps(result,default=str))
         except Exception as e:
             return HttpResponseBadRequest(e)
 
-    if(request.method=='UPDATE'):
+    if(request.POST.get('update',False)):
         try:
-            registerName = request.UPDATE['name']
-            registerPassword = request.UPDATE['password']
-            return HttpResponse('POST ok!')
+            updateName = request.POST['name']
+            updatePassword = request.POST['password']
+            Email = request.POST['email']
+            member = registers.objects.get(email=Email)
+            member.name = updateName
+            member.password = updatePassword
+            member.save()
+            result = {'نام': member.name,
+                      'کلمه عبور': member.password,
+                      'ایمیل': member.email,
+                      'تاریخ ثبت نام': member.date}
+            return HttpResponse(json.dumps(result,default=str))
         except Exception as e:
             return HttpResponseBadRequest(e)
 
@@ -57,7 +69,6 @@ def members(request):
             print('<<<<','enter delete','>>>>>>')
             member = registers.objects.get(email=request.POST['email'])
             member.delete()
-            print('===',member,'====')
             return HttpResponse('deleted!')
         except Exception as e:
             return HttpResponseBadRequest(e)
