@@ -26,12 +26,12 @@ function registerForm(e){
         password: $( '#txtRegister2' ).val().trim(),
         email: $( '#txtRegister3' ).val().toLowerCase().trim()
       },
-      contentType: 'text/plain',
       timeout: 10000,
       cache: false
       
     };
     $.ajax(settings).done(function(data){
+      console.log( data );
       $( '#registerinfo' ).css('opacity','1');
       try{
         var $table=$( '<table class="table table-striped"/>' ).append($('<tbody/>'));
@@ -44,16 +44,8 @@ function registerForm(e){
       }
     }).fail(function(err){
         $( '#registerinfo' ).css('opacity','1');
-        var $table=$( '<table class="table table-striped"/>' ).append($('<tbody/>'));
-        $.each(err,function(i,value){
-          if (typeof(value)=='object') {
-            $.each(value.errors,function(i,v){
-              $table.append( $( '<tr/>' ).append('<td>'+v.message+'</td>') )
-            });
-          }
-        });
-        $( 'div#registerinfo' ).html( '<h3 class="text-danger">خطا </h3>' ).append($table);
-      });
+        $( 'div#registerinfo' ).html( '<h3 class="text-danger">خطا </h3>' ).append(JSON.stringify(err.responseText));
+    });
   }
   
   
@@ -124,6 +116,11 @@ function registerForm(e){
     var settings={
       method: 'PUT' ,
       url: '/api/members/' ,
+      beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+      },
       data: {
         name: $( '#txtupdate0' ).val().toLowerCase().trim(),
         password: $( '#txtupdate1' ).val().trim(),
@@ -173,7 +170,6 @@ function registerForm(e){
       data: {
         email: $( '#txtsearch' ).val().toLowerCase().trim()
       },
-      contentType: 'text/plain',
       timeout: 10000,
       cache: false
 
@@ -217,8 +213,6 @@ function registerForm(e){
         email: $( '#txtdelete' ).val().toLowerCase().trim(),
         // csrftoken: jQuery("[name=csrfmiddlewaretoken]").val()
       },
-      dataType:"html",
-      contentType: false,
       timeout: 10000,
       cache: false,
       processData: false,
