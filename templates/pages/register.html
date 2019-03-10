@@ -83,6 +83,7 @@
         <div class="container-fluid">
             <div class="row px-3 my-3">
                 <form class=" col-md-6 w-100 mb-3">
+                    {% csrf_token %}
                     <div class="col my-3">
                         <label class="col mb-0 px-0" for="txtRegister1">نام: </label>
                         <input class="form-control " type="text" name="" id="txtRegister1" placeholder="نام" >
@@ -126,6 +127,7 @@
                     <div class=" row px-3 mt-5" >
                         <div class="col-md-6">
                             <form >
+                                {% csrf_token %}
                                 <div class="col ">
                                     <h5 class="text-primary"> مشخصات کاربر</h5>
                                 </div>
@@ -183,11 +185,14 @@
             <div class="row px-3 my-3">
                 <div class="col-sm10 col-md-9 col-lg-7 ">
                     <div class=" input-group pr-3">
-                        <label class="col-12 mb-2 px-0" for="txtdelete"> آدرس ایمیل: </label>
-                        <input type="email" name="text1" id="txtdelete" class="form-control" placeholder="آدرس ایمیل را وارد کنید" style="border-top-right-radius: 2px; border-bottom-right-radius: 2px;border-top-left-radius: 0;border-bottom-left-radius: 0;box-shadow: none;">
-                        <div class="input-group-append">
-                            <button id="deletebtn" class="btn btn-outline-info" type="button" style="box-shadow: none;width: 100px;">حذف</button>
-                        </div>
+                        <form action="">{% csrf_token %}
+                                <label class="col-12 mb-2 px-0" for="txtdelete"> آدرس ایمیل: </label>
+                                <input type="email" name="text1" id="txtdelete" class="form-control" placeholder="آدرس ایمیل را وارد کنید" style="border-top-right-radius: 2px; border-bottom-right-radius: 2px;border-top-left-radius: 0;border-bottom-left-radius: 0;box-shadow: none;">
+                                <div class="input-group-append">
+                                    <button id="deletebtn" class="btn btn-outline-info" type="button" style="box-shadow: none;width: 100px;">حذف</button>
+                                </div>
+                        </form>
+                        
                     </div>
                 </div>
                 <div class="col-12 mt-4">

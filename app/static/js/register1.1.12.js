@@ -16,12 +16,20 @@ function registerForm(e){
     var settings={
       method: 'post' ,
       url: '/api/members/' ,
+      beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+      },
       data: {
         name: $( '#txtRegister1' ).val().toLowerCase().trim(),
         password: $( '#txtRegister2' ).val().trim(),
         email: $( '#txtRegister3' ).val().toLowerCase().trim()
       },
-      timeout: 10000
+      contentType: 'text/plain',
+      timeout: 10000,
+      cache: false
+      
     };
     $.ajax(settings).done(function(data){
       $( '#registerinfo' ).css('opacity','1');
@@ -77,10 +85,16 @@ function registerForm(e){
     var settings={
       method: 'get' ,
       url: '/api/members/' ,
+      beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+      },
       data: {
         email: $( '#txtupdate' ).val().toLowerCase().trim()
       },
-      timeout: 10000
+      timeout: 10000,
+      cache: false
     };
     $.ajax(settings).done(function(data){
       $( '#searchinfo' ).css('opacity','1');
@@ -115,7 +129,8 @@ function registerForm(e){
         password: $( '#txtupdate1' ).val().trim(),
         email: $( '#txtupdate2' ).val().toLowerCase().trim()
       },
-      timeout: 10000
+      timeout: 10000,
+      cache: false
     };
     $.ajax(settings).done(function(data){
       $( '#updateinfo' ).css('display','block');
@@ -150,12 +165,21 @@ function registerForm(e){
     var settings={
       method: 'get' ,
       url: '/api/search/' ,
+      beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+      },
       data: {
         email: $( '#txtsearch' ).val().toLowerCase().trim()
       },
-      timeout: 10000
+      contentType: 'text/plain',
+      timeout: 10000,
+      cache: false
+
     };
     $.ajax(settings).done(function(data){
+      console.log( typeof(data) );
       $( '#searchResult' ).css('opacity','1');
       try{
         var $table=$( '<table class="table table-striped"/>' ).append($('<tbody/>'));
@@ -173,25 +197,57 @@ function registerForm(e){
   }
   
   
-  
+  function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+
+
   function deleteForm(){
     $( '#deleteResult' ).css('opacity','.2');
     var settings={
       method: 'DELETE' ,
       url: '/api/members/' ,
-      data: {
-        email: $( '#txtdelete' ).val().toLowerCase().trim()
+      beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
       },
-      timeout: 10000
+      data: {
+        email: $( '#txtdelete' ).val().toLowerCase().trim(),
+        // csrftoken: jQuery("[name=csrfmiddlewaretoken]").val()
+      },
+      dataType:"html",
+      contentType: false,
+      timeout: 10000,
+      cache: false,
+      processData: false,
     };
     $.ajax(settings).done(function(data){
+      console.log( data );
       $( '#deleteResult' ).css('opacity','1');
       $( 'div#deleteResult' ).html( '<p class="text-primary">حذف با موفقیت انجام شد</p><p>'+$( '#txtdelete' ).val().toLowerCase().trim()+'</p>' );
+      $( 'div#deleteResult' ).append(data);
     }).fail(function(err){
       $( '#deleteResult' ).css('opacity','1');
       $( 'div#deleteResult' ).html( '<h3 class="text-danger">خطا </h3>' ).append('<p class="text-danger">آدرس ایمیل نامعتبر است </p>');
     });
   }
 
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+  }
+  var csrftoken = getCookie('csrftoken');
 
-  
