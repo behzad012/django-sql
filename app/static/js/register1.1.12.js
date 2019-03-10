@@ -148,7 +148,7 @@ function registerForm(e){
   function searchForm(){
     $( '#searchResult' ).css('opacity','.3');
     var settings={
-      method: 'post' ,
+      method: 'get' ,
       url: '/api/search/' ,
       data: {
         email: $( '#txtsearch' ).val().toLowerCase().trim()
